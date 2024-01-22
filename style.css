@@ -1,0 +1,257 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+/* //////////////////////////////// Devloper Refrence ///////////////////////////// */
+
+#user  {
+    color: purple;
+    font-weight: 700;
+}
+
+/* //////////////////////////////// Navigation ///////////////////////////// */
+
+header {
+    text-align: center;
+}
+
+nav {
+    padding-block: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1000px;
+    min-width: 395px;
+    margin: auto;
+    padding-inline: 20px;
+}
+
+nav h1 {
+    position: relative;
+    font-size: 1.7rem;
+}
+
+nav h1::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: red;
+    top: 65%;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.work {
+    position: relative;
+}
+
+.work::after{
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid red; 
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    margin-left: 5px;
+}
+
+nav ul a{
+    padding-inline: 1.1vw;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: .9rem;
+}
+
+nav button{
+    padding: 5px;
+    background-color: white;
+    border-width: 1px;
+}
+
+nav button a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: .9rem;
+}
+
+/* //////////////////////////////// Wrapper / main ///////////////////////////// */
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr auto;
+    justify-content: center;
+    width: 1000px;
+    min-width: 395px;
+    margin: auto;
+}
+
+/* //////////////////////////////// Article ///////////////////////////// */
+
+article{
+    border-top: 1px solid black;
+    grid-row: 1/2;
+    padding-top: 50px;
+    padding-left: 20px;
+    position: relative;
+}
+
+article h1 {
+    font-size: 2.7rem;
+}
+
+article span {
+    display: flex;
+    align-items: center;
+}
+
+#btn-ui p {
+    background-color: #5462FF;
+    color: white;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    padding: 2px 20px;
+    margin-left: 25px;
+}
+
+figcaption {
+    padding-block: 20px;
+    font-weight: 600;
+    font-size: .8rem;
+}
+
+.btn button {
+    border: none;
+    font-weight: 600;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.btn-hire {
+    background-color: #FC481D;
+    color: white;
+    margin-right: 10px;
+}
+
+.btn-projects {
+    background-color: white;  
+    font-weight:900;
+}
+
+#arrow {
+    height: 12px;
+    margin-left: 2px;
+    transform: translateY(2px);
+}
+
+.new-design-logo {
+    position: absolute;
+    height: 90px;
+    left: 40%;
+    top: 55%;
+}
+
+.archives {
+    padding-top: 10px;
+}
+
+.archives p {
+    font-size: .8rem;
+}
+
+#contacts .archives {
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+/* //////////////////////////////// Hero image or figure ///////////////////////////// */
+
+figure {
+    background-image: url(original-da3b77c9c5eec77d571a48a273cbba1a\ \(1\).svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-row: 1/3;
+    /* width: 395px; */
+}
+
+/* //////////////////////////////// footer ///////////////////////////// */
+
+footer{
+    padding-block: 50px;
+    background-color: #262626;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer-left {
+    font-size: .7rem;
+}
+
+.footer-left button {
+    color: black;
+    background-color: yellow;
+    border: none;
+    padding: 5px 15px;
+}
+
+.footer-right {
+    width: 30%;
+}
+
+.footer-right h1{
+    font-size: .7rem;
+}
+
+.footer-right span {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px solid white;
+}
+
+/* //////////////////////////// Responsive //////////////////////////// */
+
+@media (max-width:746px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+        width: auto;
+    } 
+    nav {
+        width: 100%;
+    }
+    .new-design-logo{
+        display: none;
+    }
+}
+
+@media (max-width: 668px) {
+    nav {
+        justify-content: start;
+        gap: 50px;
+    }
+    nav ul {
+        display: none;
+    }
+    main{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1.619fr auto;
+    }
+    figure {
+        grid-row: 2/3;
+        width: 100%;
+        height: 100%;
+    }
+}
